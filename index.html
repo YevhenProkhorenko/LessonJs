@@ -19,31 +19,129 @@
        * incomingValue: null, undefined, 0, false.
        * Используй оператор ?? (nullish coalescing operator).
        */
-      const incomingValue = 0;
-      const defaultValue = 10;
-      if (incomingValue === null || undefined || 0 || false) {
-        const value = defaultValue;
-        console.log(value);
-      } else {
-        const value = incomingValue;
-        console.log(value);
-      }
+      // const incomingValue = 0;
+      // const defaultValue = 10;
+      // if (incomingValue === null || undefined || 0 || false) {
+      //   const value = defaultValue;
+      //   console.log(value);
+      // } else {
+      //   const value = incomingValue;
+      //   console.log(value);
+      // }
       //   const value = incomingValue || defaultValue;
 
       /**
-       * Example 10 - Опертор % и методы строк
-       * Напиши скрипт который переведёт значение totalMinutes (количество минут)
-       * в строку в формате часов и минут HH:MM.
-       * 70 покажет 01:10
-       * 450 покажет 07:30
-       * 1441 покажет 24:01
+       * Example 10 - Ввод пользователя и ветвления
+       * Напиши скрипт, который будет спрашивать логин с помощью prompt и логировать результат в консоль браузера.
+       *
+       * Если посетитель вводит "Админ", то prompt запрашивает пароль
+       * Если ничего не введено или нажата клавиша Esc - вывести строку "Отменено"
+       * В противном случае вывести строку "Я вас не знаю"
+       * Пароль проверять так:
+       * *
+       * Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
+       * Иначе выводить строку "Неверный пароль"
+       *  */
+      // const log = prompt("Enter your login");
+      // const adminpass = "i am admin";
+      // const password = prompt("Enter your password");
+      // const result =
+      //   log === "admin" && password === "Я админ"
+      //     ? console.log("Здравствуйте!")
+      //     : console.log("Неверный пароль");
+      // if (log === null || password === null) {
+      //   console.log("Отменено");
+      // } else {
+      //   console.log("Я вас не знаю");
+      // }
+
+      // if (log === "admin" && log !== null) {
+      //   prompt(password);
+      // } else if (log !== "admin") {
+      //   console.log("Я вас не знаю");
+      // } else if (log === null) {
+      //   console.log("Отменено");
+      // } else if (password === "i am admin" && password !== null) {
+      //   console.log("Здравствуйте!");
+      // } else if (password !== "i am admin") {
+      //   console.log("Неверный пароль");
+      // } else if (password === null) {
+      //   console.log("Отменено");
+      // }
+      // switch (log) {
+      //   case "admin":
+      //     prompt(password);
+      //     break;
+      //   case null:
+      //     console.log("Отменено");
+      //     break;
+      //   default:
+      //     console.log("Я вас не знаю");
+      // }
+      // switch (password) {
+      //   case "i am admin":
+      //     console.log("Здравствуйте!");
+      //     break;
+      //   case null:
+      //     console.log("Отменено");
+      //     break;
+      //   default:
+      //     console.log("Неверный пароль");
+      // }
+
+      // else {
+      //   console.log("Отменено");
+      // }
+      // if (password === "i am admin" && password !== null) {
+      //   console.log("Здравствуйте!");
+      // } else {
+      //   console.log("Неверный пароль");
+      // }
+      // if (password === null) {
+      //   console.log("Отменено");
+      // } else {
+      //   console.log("Неверный пароль");
+      // }
+
+      // * Example 11
+      //  * На основе строки "JavaScript is a pretty good language"
+      //  * Cделать новую строку, где каждое слово начинается с большой буквы, а пробелы удалены. Использовать цикл for.
+      //  */
+      // const str = "JavaScript is a pretty good language";
+      // let res = "";
+      // for (let i = 0; i < str.length; i += 1) {
+      //   if (str[i] === " ") {
+      //     res += "";
+      //     str.toUpperCase;
+      //     continue;
+      //   }
+      //   console.log(str[i]);
+      // }
+
+      /**
+       * Example 12
+       * Порахувати кількість рядків в змінній text. Використовуючи цикл while.
        */
-      let totalMinutes;
-      function func(totalMinutes) {
-        let result;
-        result = totalMinutes.time(450);
-        console.log(result);
-      }
+
+      //   const text = `Думи мої, думи мої,
+      // Лихо мені з вами!
+      // Нащо стали на папері
+      // Сумними рядами?..
+      // Чом вас вітер не розвіяв
+      // В степу, як пилину?
+      // Чом вас лихо не приспало,
+      // Як свою дитину?...`;
+      /**
+       * Example 13
+       * Перевірте, чи має рядок однакову кількість символів «x» і «o».
+       * В змінну res ви маєте записати логічне значення true або false.
+       * Рядок може містити будь-який символ. І бути нечутливим до регістру
+       * Протестувати на наступних рядках: xo, xxOo, xxxm, Oo, ooom
+       * Використовувати цикл for
+       */
+      const string = "xo";
+      let res = false;
+      let ryadok = prompt("Протестувати рядки");
     </script>
   </body>
 </html>
