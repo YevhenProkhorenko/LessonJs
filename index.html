@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
-    <script></script>
+    <script>
+      /**
+       * Example 9 - Значение по умолчанию и оператор нулевого слияния
+       * Отрефактори код так, чтобы в переменную value присваивалось значение
+       * переменной incomingValue,
+       * если оно не равно undefined или null. В противном случае должно присваиваться
+       * значение defaultValue.
+       * Проверь работу скрипта для слепдующих значений переменной
+       * incomingValue: null, undefined, 0, false.
+       * Используй оператор ?? (nullish coalescing operator).
+       */
+      const incomingValue = 0;
+      const defaultValue = 10;
+      if (incomingValue === null || undefined || 0 || false) {
+        const value = defaultValue;
+        console.log(value);
+      } else {
+        const value = incomingValue;
+        console.log(value);
+      }
+      //   const value = incomingValue || defaultValue;
+
+      /**
+       * Example 10 - Опертор % и методы строк
+       * Напиши скрипт который переведёт значение totalMinutes (количество минут)
+       * в строку в формате часов и минут HH:MM.
+       * 70 покажет 01:10
+       * 450 покажет 07:30
+       * 1441 покажет 24:01
+       */
+      let totalMinutes;
+      function func(totalMinutes) {
+        let result;
+        result = totalMinutes.time(450);
+        console.log(result);
+      }
+    </script>
   </body>
 </html>
