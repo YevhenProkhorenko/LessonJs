@@ -9,6 +9,40 @@
   </head>
   <body>
     <script>
+      // function filterArray(numbers, value) {
+      //   // Change code below this line
+      //   const arr = [];
+      //   for (const number of numbers) {
+      //     if (number > value) {
+      //       arr.push(number);
+      //     }
+      //   }
+      //   return arr;
+
+      //   // Change code above this line
+      // }
+      // console.log(filterArray([1, 2, 3], 10));
+
+      function fn() {
+        for (let i = 0; i <= 5; i += 1) {
+          console.log(i);
+
+          if (i === 3) {
+            console.log(
+              "Знайшли число 3, робимо повернення, перериваючи цикл і функцію"
+            );
+            return i;
+          }
+        }
+
+        // Цей console.log не виконається
+        console.log("Лог після циклу в тілі функції");
+      }
+
+      const result = fn();
+      console.log("Лог після виходу з функції");
+      console.log(`Результат виконання функції ${result}`);
+
       /**
        * Example 9 - Значение по умолчанию и оператор нулевого слияния
        * Отрефактори код так, чтобы в переменную value присваивалось значение
@@ -139,9 +173,9 @@
        * Протестувати на наступних рядках: xo, xxOo, xxxm, Oo, ooom
        * Використовувати цикл for
        */
-      const string = "xo";
-      let res = false;
-      let ryadok = prompt("Протестувати рядки");
+      // const string = "xo";
+      // let res = false;
+      // let ryadok = prompt("Протестувати рядки");
     </script>
   </body>
 </html>
