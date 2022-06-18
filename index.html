@@ -9,16 +9,38 @@
   </head>
   <body>
     <script>
-      function countTotalSalary(salaries) {
-        let totalSalary = 0;
-        // Change code below this line
-        const name = Object.keys(salaries);
-        for()
-        const sum = Object.values(salaries);
-        totalSalary = name * sum;
-        // Change code above this line
-        return totalSalary;
+      const pizzaPalace = {
+        pizzas: ["Ultracheese", "Smoked", "Four meats"],
+        order(pizzaName, onSuccess, onError) {
+          if (pizzaName !== pizzaPalace.pizzas) {
+            return onError(
+              "There is no pizza with a name <имя пиццы> in the assortment."
+            );
+          }
+          return onSuccess(pizzaName);
+        },
+      };
+      // Change code above this line
+
+      // Callback for onSuccess
+      function makePizza(pizzaName) {
+        return `Your order is accepted. Cooking pizza ${pizzaName}.`;
       }
+
+      // Callback for onError
+      function onOrderError(error) {
+        return `Error! ${error}`;
+      }
+      // function countTotalSalary(salaries) {
+      //   let totalSalary = 0;
+      //   // Change code below this line
+      //   const name = Object.keys(salaries);
+      //   for()
+      //   const sum = Object.values(salaries);
+      //   totalSalary = name * sum;
+      //   // Change code above this line
+      //   return totalSalary;
+      // }
 
       // function filterArray(numbers, value) {
       //   // Change code below this line
