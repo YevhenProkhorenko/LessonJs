@@ -9,292 +9,364 @@
   </head>
   <body>
     <script>
-      // class User {
-      //   constructor(config) {
-      //     const {
-      //       email,
-      //       age,
-      //       blog: { numberOfPosts, topics },
-      //     } = config;
-      //     this.email = email;
-      //     this.age = age;
-      //     this.numberOfPosts = numberOfPosts;
-      //     this.topics = topics;
-      //   }
-      //   getInfo() {
-      //     const { email, age, numberOfPosts } = this;
-      //     return `user ${email} is ${age} years old and has ${numberOfPosts} posts`;
-      //   }
-      //   updatePostCount(value) {
-      //     this.numberOfPosts = value;
-      //   }
-      // }
-      // const mango = new User({
-      //   email: "mango@mail.com",
-      //   age: 24,
-      //   blog: {
-      //     numberOfPosts: 20,
-      //     topics: ["tech", "cooking"],
-      //   },
-      // });
-      // console.log(mango.getInfo());
+        // class User {
+        //   constructor(config) {
+        //     const {
+        //       email,
+        //       age,
+        //       blog: { numberOfPosts, topics },
+        //     } = config;
+        //     this.email = email;
+        //     this.age = age;
+        //     this.numberOfPosts = numberOfPosts;
+        //     this.topics = topics;
+        //   }
+        //   getInfo() {
+        //     const { email, age, numberOfPosts } = this;
+        //     return `user ${email} is ${age} years old and has ${numberOfPosts} posts`;
+        //   }
+        //   updatePostCount(value) {
+        //     this.numberOfPosts = value;
+        //   }
+        // }
+        // const mango = new User({
+        //   email: "mango@mail.com",
+        //   age: 24,
+        //   blog: {
+        //     numberOfPosts: 20,
+        //     topics: ["tech", "cooking"],
+        //   },
+        // });
+        // console.log(mango.getInfo());
 
-      ///Example 2
-      // class Storage {
-      //   constructor(items) {
-      //     this.items = items;
-      //   }
-      //   getItems() {
-      //     return this.items;
-      //   }
-      //   addItems(item) {
-      //     this.items.push(item);
-      //   }
-      //   removeItem(item) {
-      //     // const index = this.items.indexOf(item);
-      //     // this.items.splice(index, 1);
-      //     this.items = this.items.filter((element) => element !== item);
-      //     console.log(this.items);
-      //   }
-      // }
-      // const storage = new Storage(["tomato", "lemon", "banana", "cherry"]);
-      // storage.removeItem("tomato");
-      //// Example 3
-      // class User {
-      //   #login;
-      //   #email;
-      //   constructor({ login, email }) {
-      //     this.#login = login;
-      //     this.#email = email;
-      //     this.lastChanges = [email];
-      //   }
-      //   get email() {
-      //     return this.#email;
-      //   }
+        ///Example 2
+        // class Storage {
+        //   constructor(items) {
+        //     this.items = items;
+        //   }
+        //   getItems() {
+        //     return this.items;
+        //   }
+        //   addItems(item) {
+        //     this.items.push(item);
+        //   }
+        //   removeItem(item) {
+        //     // const index = this.items.indexOf(item);
+        //     // this.items.splice(index, 1);
+        //     this.items = this.items.filter((element) => element !== item);
+        //     console.log(this.items);
+        //   }
+        // }
+        // const storage = new Storage(["tomato", "lemon", "banana", "cherry"]);
+        // storage.removeItem("tomato");
+        //// Example 3
+        // class User {
+        //   #login;
+        //   #email;
+        //   constructor({ login, email }) {
+        //     this.#login = login;
+        //     this.#email = email;
+        //     this.lastChanges = [email];
+        //   }
+        //   get email() {
+        //     return this.#email;
+        //   }
 
-      //   set email(value) {
-      //     if (!value) throw new Error("Some message");
-      //     this.lastChanges.push(value);
-      //     this.#email = value;
-      //   }
-      //   get login() {
-      //     return this.#login;
-      //   }
+        //   set email(value) {
+        //     if (!value) throw new Error("Some message");
+        //     this.lastChanges.push(value);
+        //     this.#email = value;
+        //   }
+        //   get login() {
+        //     return this.#login;
+        //   }
 
-      //   set login(value) {
-      //     this.#login = value;
-      //   }
-      // }
-      // const mango = new User({
-      //   login: "Mango",
-      //   email: "mango@mail.com",
-      // });
-      // mango.email = "notMango@mail.com";
-      // mango.email = "ggg@gmail.com";
-      // console.log(mango);
+        //   set login(value) {
+        //     this.#login = value;
+        //   }
+        // }
+        // const mango = new User({
+        //   login: "Mango",
+        //   email: "mango@mail.com",
+        // });
+        // mango.email = "notMango@mail.com";
+        // mango.email = "ggg@gmail.com";
+        // console.log(mango);
 
-      /// Examples 4
+        /// Examples 4
+        // class Notes {
+        //   static priority = {
+        //     LOW: "low",
+        //     NORMAL: "normal",
+        //     HIGH: "high",
+        //   };
+        //   constructor(items) {
+        //     this.items = items;
+        //   }
+        //   addNote({ text, priority = Notes.priority.LOW }) {
+        //     this.items.push({ text, priority });
+        //   }
+        //   removeNote(text) {
+        //     const index = this.items.findIndex((item) => item.text === text);
+        //     if (index === -1) return;
+        //     this.items.splice(index, 1);
+        //   }
+        //   updateNotePriority(searchText, priority = Notes.priority.LOW) {
+        //     const index = this.items.findIndex(
+        //       (item) => item.text === searchText
+        //     );
+        //     if (index === -1) return;
+        //     this.items[index] = { text, priority };
+        //   }
+        // }
+        // const myNotes = new Notes([]);
+        // console.log(myNotes);
+        // myNotes.addNote({
+        //   text: "Моя первая заметка",
+        //   priority: console.log(myNotes.items),
+        // });
+        // myNotes.addNote({
+        //   text: "Моя вторая заметка",
+        //   priority: Notes.priority.NORMAL,
+        // });
 
-      // const pizzaPalace = {
-      //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
-      //   order(pizzaName, onSuccess, onError) {
-      //     if (pizzaName !== pizzaPalace.pizzas) {
-      //       return onError(
-      //         "There is no pizza with a name <имя пиццы> in the assortment."
-      //       );
-      //     }
-      //     return onSuccess(pizzaName);
-      //   },
-      // };
-      // // Change code above this line
 
-      // // Callback for onSuccess
-      // function makePizza(pizzaName) {
-      //   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-      // }
 
-      // // Callback for onError
-      // function onOrderError(error) {
-      //   return `Error! ${error}`;
-      // }
-      // function countTotalSalary(salaries) {
-      //   let totalSalary = 0;
-      //   // Change code below this line
-      //   const name = Object.keys(salaries);
-      //   for()
-      //   const sum = Object.values(salaries);
-      //   totalSalary = name * sum;
-      //   // Change code above this line
-      //   return totalSalary;
-      // }
+      //// Example 5
+        class Toggle{
+          constructor({isOpen: boolean}){
+            this.on = false,
+          }
+        }
+         const firstToggle = new Toggle({isOpen: true});
+         console.group('firstToggle');
+         console.log(firstToggle.on);
 
-      // function filterArray(numbers, value) {
-      //   // Change code below this line
-      //   const arr = [];
-      //   for (const number of numbers) {
-      //     if (number > value) {
-      //       arr.push(number);
-      //     }
-      //   }
-      //   return arr;
 
-      //   // Change code above this line
-      // }
-      // console.log(filterArray([1, 2, 3], 10));
 
-      // function fn() {
-      //   for (let i = 0; i <= 5; i += 1) {
-      //     console.log(i);
 
-      //     if (i === 3) {
-      //       console.log(
-      //         "Знайшли число 3, робимо повернення, перериваючи цикл і функцію"
-      //       );
-      //       return i;
-      //     }
-      //   }
 
-      //   // Цей console.log не виконається
-      //   console.log("Лог після циклу в тілі функції");
-      // }
 
-      // const result = fn();
-      // console.log("Лог після виходу з функції");
-      // console.log(`Результат виконання функції ${result}`);
 
-      /**
-       * Example 9 - Значение по умолчанию и оператор нулевого слияния
-       * Отрефактори код так, чтобы в переменную value присваивалось значение
-       * переменной incomingValue,
-       * если оно не равно undefined или null. В противном случае должно присваиваться
-       * значение defaultValue.
-       * Проверь работу скрипта для слепдующих значений переменной
-       * incomingValue: null, undefined, 0, false.
-       * Используй оператор ?? (nullish coalescing operator).
-       */
-      // const incomingValue = 0;
-      // const defaultValue = 10;
-      // if (incomingValue === null || undefined || 0 || false) {
-      //   const value = defaultValue;
-      //   console.log(value);
-      // } else {
-      //   const value = incomingValue;
-      //   console.log(value);
-      // }
-      //   const value = incomingValue || defaultValue;
 
-      /**
-       * Example 10 - Ввод пользователя и ветвления
-       * Напиши скрипт, который будет спрашивать логин с помощью prompt и логировать результат в консоль браузера.
-       *
-       * Если посетитель вводит "Админ", то prompt запрашивает пароль
-       * Если ничего не введено или нажата клавиша Esc - вывести строку "Отменено"
-       * В противном случае вывести строку "Я вас не знаю"
-       * Пароль проверять так:
-       * *
-       * Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
-       * Иначе выводить строку "Неверный пароль"
-       *  */
-      // const log = prompt("Enter your login");
-      // const adminpass = "i am admin";
-      // const password = prompt("Enter your password");
-      // const result =
-      //   log === "admin" && password === "Я админ"
-      //     ? console.log("Здравствуйте!")
-      //     : console.log("Неверный пароль");
-      // if (log === null || password === null) {
-      //   console.log("Отменено");
-      // } else {
-      //   console.log("Я вас не знаю");
-      // }
 
-      // if (log === "admin" && log !== null) {
-      //   prompt(password);
-      // } else if (log !== "admin") {
-      //   console.log("Я вас не знаю");
-      // } else if (log === null) {
-      //   console.log("Отменено");
-      // } else if (password === "i am admin" && password !== null) {
-      //   console.log("Здравствуйте!");
-      // } else if (password !== "i am admin") {
-      //   console.log("Неверный пароль");
-      // } else if (password === null) {
-      //   console.log("Отменено");
-      // }
-      // switch (log) {
-      //   case "admin":
-      //     prompt(password);
-      //     break;
-      //   case null:
-      //     console.log("Отменено");
-      //     break;
-      //   default:
-      //     console.log("Я вас не знаю");
-      // }
-      // switch (password) {
-      //   case "i am admin":
-      //     console.log("Здравствуйте!");
-      //     break;
-      //   case null:
-      //     console.log("Отменено");
-      //     break;
-      //   default:
-      //     console.log("Неверный пароль");
-      // }
 
-      // else {
-      //   console.log("Отменено");
-      // }
-      // if (password === "i am admin" && password !== null) {
-      //   console.log("Здравствуйте!");
-      // } else {
-      //   console.log("Неверный пароль");
-      // }
-      // if (password === null) {
-      //   console.log("Отменено");
-      // } else {
-      //   console.log("Неверный пароль");
-      // }
 
-      // * Example 11
-      //  * На основе строки "JavaScript is a pretty good language"
-      //  * Cделать новую строку, где каждое слово начинается с большой буквы, а пробелы удалены. Использовать цикл for.
-      //  */
-      // const str = "JavaScript is a pretty good language";
-      // let res = "";
-      // for (let i = 0; i < str.length; i += 1) {
-      //   if (str[i] === " ") {
-      //     res += "";
-      //     str.toUpperCase;
-      //     continue;
-      //   }
-      //   console.log(str[i]);
-      // }
 
-      /**
-       * Example 12
-       * Порахувати кількість рядків в змінній text. Використовуючи цикл while.
-       */
 
-      //   const text = `Думи мої, думи мої,
-      // Лихо мені з вами!
-      // Нащо стали на папері
-      // Сумними рядами?..
-      // Чом вас вітер не розвіяв
-      // В степу, як пилину?
-      // Чом вас лихо не приспало,
-      // Як свою дитину?...`;
-      /**
-       * Example 13
-       * Перевірте, чи має рядок однакову кількість символів «x» і «o».
-       * В змінну res ви маєте записати логічне значення true або false.
-       * Рядок може містити будь-який символ. І бути нечутливим до регістру
-       * Протестувати на наступних рядках: xo, xxOo, xxxm, Oo, ooom
-       * Використовувати цикл for
-       */
-      // const string = "xo";
-      // let res = false;
-      // let ryadok = prompt("Протестувати рядки");
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const pizzaPalace = {
+        //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+        //   order(pizzaName, onSuccess, onError) {
+        //     if (pizzaName !== pizzaPalace.pizzas) {
+        //       return onError(
+        //         "There is no pizza with a name <имя пиццы> in the assortment."
+        //       );
+        //     }
+        //     return onSuccess(pizzaName);
+        //   },
+        // };
+        // // Change code above this line
+
+        // // Callback for onSuccess
+        // function makePizza(pizzaName) {
+        //   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+        // }
+
+        // // Callback for onError
+        // function onOrderError(error) {
+        //   return `Error! ${error}`;
+        // }
+        // function countTotalSalary(salaries) {
+        //   let totalSalary = 0;
+        //   // Change code below this line
+        //   const name = Object.keys(salaries);
+        //   for()
+        //   const sum = Object.values(salaries);
+        //   totalSalary = name * sum;
+        //   // Change code above this line
+        //   return totalSalary;
+        // }
+
+        // function filterArray(numbers, value) {
+        //   // Change code below this line
+        //   const arr = [];
+        //   for (const number of numbers) {
+        //     if (number > value) {
+        //       arr.push(number);
+        //     }
+        //   }
+        //   return arr;
+
+        //   // Change code above this line
+        // }
+        // console.log(filterArray([1, 2, 3], 10));
+
+        // function fn() {
+        //   for (let i = 0; i <= 5; i += 1) {
+        //     console.log(i);
+
+        //     if (i === 3) {
+        //       console.log(
+        //         "Знайшли число 3, робимо повернення, перериваючи цикл і функцію"
+        //       );
+        //       return i;
+        //     }
+        //   }
+
+        //   // Цей console.log не виконається
+        //   console.log("Лог після циклу в тілі функції");
+        // }
+
+        // const result = fn();
+        // console.log("Лог після виходу з функції");
+        // console.log(`Результат виконання функції ${result}`);
+
+        /**
+         * Example 9 - Значение по умолчанию и оператор нулевого слияния
+         * Отрефактори код так, чтобы в переменную value присваивалось значение
+         * переменной incomingValue,
+         * если оно не равно undefined или null. В противном случае должно присваиваться
+         * значение defaultValue.
+         * Проверь работу скрипта для слепдующих значений переменной
+         * incomingValue: null, undefined, 0, false.
+         * Используй оператор ?? (nullish coalescing operator).
+         */
+        // const incomingValue = 0;
+        // const defaultValue = 10;
+        // if (incomingValue === null || undefined || 0 || false) {
+        //   const value = defaultValue;
+        //   console.log(value);
+        // } else {
+        //   const value = incomingValue;
+        //   console.log(value);
+        // }
+        //   const value = incomingValue || defaultValue;
+
+        /**
+         * Example 10 - Ввод пользователя и ветвления
+         * Напиши скрипт, который будет спрашивать логин с помощью prompt и логировать результат в консоль браузера.
+         *
+         * Если посетитель вводит "Админ", то prompt запрашивает пароль
+         * Если ничего не введено или нажата клавиша Esc - вывести строку "Отменено"
+         * В противном случае вывести строку "Я вас не знаю"
+         * Пароль проверять так:
+         * *
+         * Если введён пароль "Я админ", то вывести строку "Здравствуйте!"
+         * Иначе выводить строку "Неверный пароль"
+         *  */
+        // const log = prompt("Enter your login");
+        // const adminpass = "i am admin";
+        // const password = prompt("Enter your password");
+        // const result =
+        //   log === "admin" && password === "Я админ"
+        //     ? console.log("Здравствуйте!")
+        //     : console.log("Неверный пароль");
+        // if (log === null || password === null) {
+        //   console.log("Отменено");
+        // } else {
+        //   console.log("Я вас не знаю");
+        // }
+
+        // if (log === "admin" && log !== null) {
+        //   prompt(password);
+        // } else if (log !== "admin") {
+        //   console.log("Я вас не знаю");
+        // } else if (log === null) {
+        //   console.log("Отменено");
+        // } else if (password === "i am admin" && password !== null) {
+        //   console.log("Здравствуйте!");
+        // } else if (password !== "i am admin") {
+        //   console.log("Неверный пароль");
+        // } else if (password === null) {
+        //   console.log("Отменено");
+        // }
+        // switch (log) {
+        //   case "admin":
+        //     prompt(password);
+        //     break;
+        //   case null:
+        //     console.log("Отменено");
+        //     break;
+        //   default:
+        //     console.log("Я вас не знаю");
+        // }
+        // switch (password) {
+        //   case "i am admin":
+        //     console.log("Здравствуйте!");
+        //     break;
+        //   case null:
+        //     console.log("Отменено");
+        //     break;
+        //   default:
+        //     console.log("Неверный пароль");
+        // }
+
+        // else {
+        //   console.log("Отменено");
+        // }
+        // if (password === "i am admin" && password !== null) {
+        //   console.log("Здравствуйте!");
+        // } else {
+        //   console.log("Неверный пароль");
+        // }
+        // if (password === null) {
+        //   console.log("Отменено");
+        // } else {
+        //   console.log("Неверный пароль");
+        // }
+
+        // * Example 11
+        //  * На основе строки "JavaScript is a pretty good language"
+        //  * Cделать новую строку, где каждое слово начинается с большой буквы, а пробелы удалены. Использовать цикл for.
+        //  */
+        // const str = "JavaScript is a pretty good language";
+        // let res = "";
+        // for (let i = 0; i < str.length; i += 1) {
+        //   if (str[i] === " ") {
+        //     res += "";
+        //     str.toUpperCase;
+        //     continue;
+        //   }
+        //   console.log(str[i]);
+        // }
+
+        /**
+         * Example 12
+         * Порахувати кількість рядків в змінній text. Використовуючи цикл while.
+         */
+
+        //   const text = `Думи мої, думи мої,
+        // Лихо мені з вами!
+        // Нащо стали на папері
+        // Сумними рядами?..
+        // Чом вас вітер не розвіяв
+        // В степу, як пилину?
+        // Чом вас лихо не приспало,
+        // Як свою дитину?...`;
+        /**
+         * Example 13
+         * Перевірте, чи має рядок однакову кількість символів «x» і «o».
+         * В змінну res ви маєте записати логічне значення true або false.
+         * Рядок може містити будь-який символ. І бути нечутливим до регістру
+         * Протестувати на наступних рядках: xo, xxOo, xxxm, Oo, ooom
+         * Використовувати цикл for
+         */
+        // const string = "xo";
+        // let res = false;
+        // let ryadok = prompt("Протестувати рядки");
     </script>
   </body>
 </html>
