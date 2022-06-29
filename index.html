@@ -60,38 +60,40 @@
       // const storage = new Storage(["tomato", "lemon", "banana", "cherry"]);
       // storage.removeItem("tomato");
       //// Example 3
-      class User {
-        #login;
-        #email;
-        constructor({ login, email }) {
-          this.#login = login;
-          this.#email = email;
-          this.lastChanges = [email];
-        }
-        get email() {
-          return this.#email;
-        }
+      // class User {
+      //   #login;
+      //   #email;
+      //   constructor({ login, email }) {
+      //     this.#login = login;
+      //     this.#email = email;
+      //     this.lastChanges = [email];
+      //   }
+      //   get email() {
+      //     return this.#email;
+      //   }
 
-        set email(value) {
-          if (!value) throw new Error("Some message");
-          this.lastChanges.push(value);
-          this.#email = value;
-        }
-        get login() {
-          return this.#login;
-        }
+      //   set email(value) {
+      //     if (!value) throw new Error("Some message");
+      //     this.lastChanges.push(value);
+      //     this.#email = value;
+      //   }
+      //   get login() {
+      //     return this.#login;
+      //   }
 
-        set login(value) {
-          this.#login = value;
-        }
-      }
-      const mango = new User({
-        login: "Mango",
-        email: "mango@mail.com",
-      });
-      mango.email = "notMango@mail.com";
-      mango.email = "ggg@gmail.com";
-      console.log(mango);
+      //   set login(value) {
+      //     this.#login = value;
+      //   }
+      // }
+      // const mango = new User({
+      //   login: "Mango",
+      //   email: "mango@mail.com",
+      // });
+      // mango.email = "notMango@mail.com";
+      // mango.email = "ggg@gmail.com";
+      // console.log(mango);
+
+      /// Examples 4
 
       // const pizzaPalace = {
       //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
